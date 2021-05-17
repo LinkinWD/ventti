@@ -241,22 +241,22 @@ const korttipakka = [
     },
     {
         nimi: "herttaässä",
-        arvo: 1,
+        arvo: 11,
         img: "img/AH.png"
     },
     {
         nimi: "ruutuässä",
-        arvo: 1,
+        arvo: 11,
         img: "img/AD.png"
     },
     {
         nimi: "ristiässä",
-        arvo: 1,
+        arvo: 11,
         img: "img/AC.png"
     },
     {
         nimi: "pataässä",
-        arvo: 1,
+        arvo: 11,
         img: "img/AS.png"
     },
 ]
@@ -264,10 +264,4 @@ const korttipakka = [
 
 
 
-function kortti() {
-    for( let kortti of korttipakka) {
-    let div = document.createElement('div')
-    div.innerHTML = `<img src=${kortti.img}>`
-    document.body.append(div)
-    }
-}
+
