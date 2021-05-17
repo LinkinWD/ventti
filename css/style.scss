@@ -1,0 +1,22 @@
+header {
+    height: 10vh;
+    h1 {
+        text-align: center;
+    }
+}
+.pelialue {
+    height: 90vh;
+    background-color: limegreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    #napit {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
