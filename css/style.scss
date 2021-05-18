@@ -1,15 +1,21 @@
+body {
+    color: white;
+    background-color: limegreen;
+}
+
 header {
     height: 10vh;
-    h1 {
-        text-align: center;
-    }
+    display: flex;
+    justify-content: center;
+    background-color: darkgreen;
+    border-radius: 5px;
+    
    
 }
 .pelialue {
     height: 80vh;
-    background-color: limegreen;
-     display: flex;
-     flex-direction: column;
+     display: grid;
+
      align-items: center;
      justify-content: center;
     
@@ -28,6 +34,8 @@ button {
     font-size: 1.2rem;
     border-radius: 5px;
     margin: 20px 0;
+    background-color: darkgreen;
+   color: white;
     
 }
 h5 {
@@ -39,12 +47,31 @@ h5 {
     margin-bottom: auto;
 }
 img {
-    width: 17vw;
+    width: 20%;
 }
 .tietokone {
     position: relative;
+    text-align: center;
+}
+.pelaaja {
+    text-align: center;
+    width: 100%;
+}
+.peitekortti {
+    width: 20%;
+   left: 30%;
 }
 
 .piilota {
     display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+    img {
+        width: 10%;
+    }
+    .peitekortti {
+        width: 10%;
+       left: 40%;
+    }
 }

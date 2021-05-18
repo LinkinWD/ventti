@@ -1,21 +1,24 @@
-header {
-  height: 10vh;
+body {
+  color: white;
+  background-color: limegreen;
 }
 
-header h1 {
-  text-align: center;
+header {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: darkgreen;
+  border-radius: 5px;
 }
 
 .pelialue {
   height: 80vh;
-  background-color: limegreen;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -47,6 +50,8 @@ button {
   font-size: 1.2rem;
   border-radius: 5px;
   margin: 20px 0;
+  background-color: darkgreen;
+  color: white;
 }
 
 h5 {
@@ -60,14 +65,35 @@ h5 {
 }
 
 img {
-  width: 17vw;
+  width: 20%;
 }
 
 .tietokone {
   position: relative;
+  text-align: center;
+}
+
+.pelaaja {
+  text-align: center;
+  width: 100%;
+}
+
+.peitekortti {
+  width: 20%;
+  left: 30%;
 }
 
 .piilota {
   display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  img {
+    width: 10%;
+  }
+  .peitekortti {
+    width: 10%;
+    left: 40%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

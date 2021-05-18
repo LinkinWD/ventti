@@ -13,16 +13,21 @@ const h5 = document.querySelectorAll('h5')
 const pelaajanPisteet = document.querySelector('#pisteet')
 
 
+
 const pelaaja = 
   {
+    nimi: 'pelaaja',
     pisteet : 0,
-    ässät : false
+    ässät : false,
+    ässävähennyt: false
   }
 
 const tietokone =
   {
+    nimi: 'tietokone',
     pisteet : 0,
-    ässät : false
+    ässät : false,
+    ässävähennyt: false
   }
 
 
@@ -39,6 +44,7 @@ function aloitaPeli() {
     tietokone.ässät = false
     tietokoneKortit.innerHTML = ''
     pelaajaKortit.innerHTML = ''
+    vedäKortti.disabled = false
     sekoita(korttipakka)
     jaaKortti(tietokone)
     jaaKortti(tietokone)
@@ -46,8 +52,10 @@ function aloitaPeli() {
     jaaKortti(pelaaja)
     piilotaKortti()
     pelaajanPisteet.innerText = pelaaja.pisteet
-    voittikoJokuAlussa()
     näytäTekstit()
+    if(pelaaja.pisteet === 21) {
+      voittoSeremonia('pelaaja')
+    } 
 }
 function pelaajaVetääKortin() {
     pelaajanPisteet.innerText = ''
@@ -58,7 +66,8 @@ function pelaajaVetääKortin() {
 function pelaajaKatsoo() {
     const peiteKortti = document.querySelector('.peitekortti')
     peiteKortti.classList.add('piilota')
-    
+    vedäKortti.disabled = true
+    tietokonePelaa()
 }
 
 
@@ -96,8 +105,9 @@ function jaaKortti(puoli) {
     }
     
     puoli.pisteet += arvo
-    if(puoli.pisteet > 21 && puoli.ässät === true) {
+    if(puoli.pisteet > 21 && puoli.ässät === true && puoli.ässävähennyt === false) {
       puoli.pisteet -= 10
+      puoli.ässävähennyt = true
     }
     if(puoli !== pelaaja){
       sijainti = tietokoneKortit
@@ -108,6 +118,16 @@ function jaaKortti(puoli) {
     korttipakka.shift()
 }
 
+function tietokonePelaa() {
+  while(tietokone.pisteet < 17) {
+    jaaKortti(tietokone)
+    tarkistaMeniköYli(tietokone)
+  }
+  tarkistaVoittaja()
+}
+
+
+
 function piilotaKortti() {
   tietokoneKortit.firstChild.style.zIndex = '-1'
   let img = document.createElement('img')
@@ -115,23 +135,29 @@ function piilotaKortti() {
   img.src = '../img/purple_back.png'
   tietokoneKortit.append(img)
   img.style.position = 'absolute'
-  img.style.left = '0'
 } 
 
-function voittikoJokuAlussa() {
-  if(pelaaja.pisteet === 21) {
-    console.log('pelaaja voitti')
-  } 
-}
+
 function tarkistaMeniköYli(puoli) {
   if(puoli.pisteet > 21) {
-    console.log(puoli + ' Hävisi')
+    let voittaja = (puoli.nimi === 'tietokone' ? 'pelaaja' : 'tietokone')
+    voittoSeremonia(voittaja)
   }
 }
 
 function tarkistaVoittaja() {
-  if(puoli.pisteet > 21) {
-    console.log(puoli + ' hävisi')
+  let tPisteet = tietokone.pisteet
+  let pPisteet = pelaaja.pisteet
+  if(tPisteet === 21) {
+    voittoSeremonia('tietokone')
+  }
+  else if(pPisteet === tPisteet) {
+    voittoSeremonia('tietokone')
+  }
+  else if ( pPisteet > tPisteet) {
+    voittoSeremonia('pelaaja')
+  } else {
+    voittoSeremonia('tietokone')
   }
 }
 function näytäTekstit() {
@@ -139,6 +165,7 @@ function näytäTekstit() {
     kohde.classList.remove('piilota')
   })
 }
-
-
-
+function voittoSeremonia(voittaja) {
+  let väri = (voittaja === 'tietokone') ? 'red' : 'yellow'
+  document.body.style.backgroundColor = väri
+}
