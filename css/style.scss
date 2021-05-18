@@ -1,23 +1,29 @@
 body {
     color: white;
     background-color: limegreen;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
     height: 10vh;
     display: flex;
     justify-content: center;
-    background-color: darkgreen;
+    
     border-radius: 5px;
+    border-radius: 15px;
+background: #006400;
+box-shadow:  15px 15px 33px #004d00,
+             -15px -15px 33px #007b00;
     
    
 }
 .pelialue {
     height: 80vh;
      display: grid;
-
+    position: relative;
      align-items: center;
      justify-content: center;
+     transition: .5s all;
     
 
     #napit {
@@ -34,8 +40,15 @@ button {
     font-size: 1.2rem;
     border-radius: 5px;
     margin: 20px 0;
-    background-color: darkgreen;
-   color: white;
+    border-radius: 15px;
+    background: #006400;
+    box-shadow:  5px 5px 16px #004d00,
+                 -5px -5px 16px #007b00;
+    color: white;
+    border: 1px solid black;
+}
+button:hover {
+    transform: scale(1.1);
     
 }
 h5 {
@@ -57,6 +70,29 @@ img {
     text-align: center;
     width: 100%;
 }
+.voittoruutu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 400px;
+    background: -moz-linear-gradient(45deg, rgba(38,172,190,1) 0%, rgba(255,255,255,1) 50%, rgba(142,255,0,1) 100%);
+background: -webkit-linear-gradient(45deg, rgba(38,172,190,1) 0%, rgba(255,255,255,1) 50%, rgba(142,255,0,1) 100%);
+background: -o-linear-gradient(45deg, rgba(38,172,190,1) 0%, rgba(255,255,255,1) 50%, rgba(142,255,0,1) 100%);
+background: -ms-linear-gradient(45deg, rgba(38,172,190,1) 0%, rgba(255,255,255,1) 50%, rgba(142,255,0,1) 100%);
+background: linear-gradient(45deg, rgba(38,172,190,1) 0%, rgba(255,255,255,1) 50%, rgba(142,255,0,1) 100%);
+    text-transform: uppercase;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    h2 {
+        font-weight: 900;
+    }
+}
+
 .peitekortti {
     width: 20%;
    left: 30%;
@@ -65,6 +101,7 @@ img {
 .piilota {
     display: none;
 }
+
 
 @media only screen and (min-width: 1000px) {
     img {

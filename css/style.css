@@ -1,6 +1,7 @@
 body {
   color: white;
   background-color: limegreen;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -11,20 +12,26 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: darkgreen;
   border-radius: 5px;
+  border-radius: 15px;
+  background: #006400;
+  -webkit-box-shadow: 15px 15px 33px #004d00, -15px -15px 33px #007b00;
+          box-shadow: 15px 15px 33px #004d00, -15px -15px 33px #007b00;
 }
 
 .pelialue {
   height: 80vh;
   display: -ms-grid;
   display: grid;
+  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: .5s all;
+  transition: .5s all;
 }
 
 .pelialue #napit {
@@ -50,8 +57,17 @@ button {
   font-size: 1.2rem;
   border-radius: 5px;
   margin: 20px 0;
-  background-color: darkgreen;
+  border-radius: 15px;
+  background: #006400;
+  -webkit-box-shadow: 5px 5px 16px #004d00, -5px -5px 16px #007b00;
+          box-shadow: 5px 5px 16px #004d00, -5px -5px 16px #007b00;
   color: white;
+  border: 1px solid black;
+}
+
+button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 h5 {
@@ -76,6 +92,33 @@ img {
 .pelaaja {
   text-align: center;
   width: 100%;
+}
+
+.voittoruutu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 200px;
+  width: 400px;
+  background: linear-gradient(45deg, #26acbe 0%, white 50%, #8eff00 100%);
+  text-transform: uppercase;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+}
+
+.voittoruutu h2 {
+  font-weight: 900;
 }
 
 .peitekortti {
