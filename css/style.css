@@ -15,8 +15,8 @@ header {
   border-radius: 5px;
   border-radius: 15px;
   background: #006400;
-  -webkit-box-shadow: 15px 15px 33px #004d00, -15px -15px 33px #007b00;
-          box-shadow: 15px 15px 33px #004d00, -15px -15px 33px #007b00;
+  -webkit-box-shadow: 5px 5px 10px #004d00, -5px -5px 10px #007b00;
+          box-shadow: 5px 5px 10px #004d00, -5px -5px 10px #007b00;
 }
 
 .pelialue {
@@ -59,8 +59,8 @@ button {
   margin: 20px 0;
   border-radius: 15px;
   background: #006400;
-  -webkit-box-shadow: 5px 5px 16px #004d00, -5px -5px 16px #007b00;
-          box-shadow: 5px 5px 16px #004d00, -5px -5px 16px #007b00;
+  -webkit-box-shadow: 2px 2px 8px #004d00, -2px -2px 8px #007b00;
+          box-shadow: 2px 2px 8px #004d00, -2px -2px 8px #007b00;
   color: white;
   border: 1px solid black;
 }

@@ -8,12 +8,11 @@ header {
     height: 10vh;
     display: flex;
     justify-content: center;
-    
     border-radius: 5px;
     border-radius: 15px;
-background: #006400;
-box-shadow:  15px 15px 33px #004d00,
-             -15px -15px 33px #007b00;
+    background: #006400;
+    box-shadow:  5px 5px 10px #004d00,
+             -5px -5px 10px #007b00;
     
    
 }
@@ -42,8 +41,8 @@ button {
     margin: 20px 0;
     border-radius: 15px;
     background: #006400;
-    box-shadow:  5px 5px 16px #004d00,
-                 -5px -5px 16px #007b00;
+    box-shadow:  2px 2px 8px #004d00,
+                 -2px -2px 8px #007b00;
     color: white;
     border: 1px solid black;
 }
@@ -78,10 +77,10 @@ img {
     height: 200px;
     width: 400px;
     background: -moz-linear-gradient(45deg, rgba(38,172,190,1) 0%, rgba(255,255,255,1) 50%, rgba(142,255,0,1) 100%);
-background: -webkit-linear-gradient(45deg, rgba(38,172,190,1) 0%, rgba(255,255,255,1) 50%, rgba(142,255,0,1) 100%);
-background: -o-linear-gradient(45deg, rgba(38,172,190,1) 0%, rgba(255,255,255,1) 50%, rgba(142,255,0,1) 100%);
-background: -ms-linear-gradient(45deg, rgba(38,172,190,1) 0%, rgba(255,255,255,1) 50%, rgba(142,255,0,1) 100%);
-background: linear-gradient(45deg, rgba(38,172,190,1) 0%, rgba(255,255,255,1) 50%, rgba(142,255,0,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(38,172,190,1) 0%, rgba(255,255,255,1) 50%, rgba(142,255,0,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(38,172,190,1) 0%, rgba(255,255,255,1) 50%, rgba(142,255,0,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(38,172,190,1) 0%, rgba(255,255,255,1) 50%, rgba(142,255,0,1) 100%);
+    background: linear-gradient(45deg, rgba(38,172,190,1) 0%, rgba(255,255,255,1) 50%, rgba(142,255,0,1) 100%);
     text-transform: uppercase;
     color: black;
     display: flex;
