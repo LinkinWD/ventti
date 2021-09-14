@@ -80,6 +80,7 @@ h5 {
 
 #uusipeli {
   margin-top: 20px;
+  z-index: 10;
 }
 
 img {
