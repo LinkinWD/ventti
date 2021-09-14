@@ -1,3 +1,7 @@
+
+/* alkuteksti */
+
+
 /* napit */
 const uusiPeli = document.querySelector('#uusipeli')
 const vedäKortti = document.querySelector('#vedäkortti')
@@ -61,6 +65,8 @@ function aloitaPeli() {
     if(pelaaja.pisteet === 21) {
       voittoSeremonia('pelaaja')
     } 
+    uusiPeli.innerText = "Uusi peli?"
+    uusiPeli.classList.add('piilota')
 }
 function pelaajaVetääKortin() {
     pelaajanPisteet.innerText = ''
@@ -165,11 +171,13 @@ function tarkistaVoittaja() {
 function voittoSeremonia(voittaja) {
   katso.disabled = true
   vedäKortti.disabled = true
-  let väri = (voittaja === 'tietokone') ? 'darkgreen' : 'lightgreen'
+  let väri = (voittaja === 'tietokone') ? 'red' : 'blue'
   document.body.style.backgroundColor = väri
   voittoRuutu.classList.remove('piilota')
   voittoRuutu.innerHTML = `<h2> ${voittaja} voitti Pelin!!!!</h2>`
-
+  uusiPeli.textContent = "Uusi peli?"
+  uusiPeli.classList.remove('piilota')
+  tietokoneKortit.firstChild.style.zIndex = '1'
 }
 /* apufunctiot */
 function näytäTekstit() {
