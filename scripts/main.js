@@ -59,17 +59,19 @@ function aloitaPeli() {
     jaaKortti(tietokone)
     jaaKortti(pelaaja)
     jaaKortti(pelaaja)
+    uusiPeli.innerText = "Uusi peli?"
+    uusiPeli.classList.add('piilota')
     if(tietokone.pisteet === 21) {
       voittoSeremonia('tietokone') 
     } else if(pelaaja.pisteet === 21) {
       voittoSeremonia('pelaaja')
-    }
-    piilotaKortti()
+    } else {
+    piilotaKortti()}
     pelaajanPisteet.innerText = pelaaja.pisteet
     näytäTekstit()
     
-    uusiPeli.innerText = "Uusi peli?"
-    uusiPeli.classList.add('piilota')
+   
+    
 }
 function pelaajaVetääKortin() {
     pelaajanPisteet.innerText = ''
@@ -172,8 +174,6 @@ function tarkistaVoittaja() {
 
 
 function voittoSeremonia(voittaja) {
-  const kortti = document.querySelector('peitekortti')
-  
   katso.disabled = true
   vedäKortti.disabled = true
   let väri = (voittaja === 'tietokone') ? 'red' : 'blue'
